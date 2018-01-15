@@ -32,10 +32,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Use Bootstrap for styling
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass'
 
 # Use jQuery for easier javascript
-gem 'jquery-rails', '~> 4.3.1'
+gem 'jquery-rails'
+
+# Use Devise for authentication
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
