@@ -1,0 +1,23 @@
+
+
+<%= form_for @monster do |f| %>
+	<ul>
+		<% @monster.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :health %>
+	<%= f.number_field :health %>
+
+	<%= f.label :image_url %>
+	<%= f.text_field :image_url %>
+
+	<%= f.label :city%>
+	<%= f.collection_select(:city_id, @cities, :city_id, :name)%>
+
+	<%= f.submit (@monster.new_record? ? "Create": "Update") %>
+<% end %>
