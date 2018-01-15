@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Codaisseurup</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<%= csrf_meta_tags %>
 
 		<%= stylesheet_link_tag    'application', media: 'all' %>
@@ -11,12 +12,18 @@
 	<body>
 		<%= render "shared/navbar" %>
 
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+		<div class="container-fluid">
+			<% if notice != nil %>
+				<p class="notice"><%= notice %></p>
+			<% end %>
 
-		<div class="container">
+			<% if alert != nil %>
+				<p class="alert"><%= alert %></p>
+			<% end %>
 			<%= yield %>
 		</div>
+
+		<%= render "shared/footer" %>
 
 	</body>
 </html>
