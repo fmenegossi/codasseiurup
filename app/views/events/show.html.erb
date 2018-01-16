@@ -24,6 +24,10 @@
       <li><%= !@event.includes_drinks ? ("<del>Includes Drinks</del>").html_safe : "Includes Drinks" %></li>
     </ul>
 
+		<h4><%= @event.categories.count > 1 ? "Categories" : "Category" %></h4>
+		<% @event.categories.each do |category| %>
+			<a class="btn btn-success"><%= category.name %></a>
+		<% end %>
   </div>
 
 </div>
