@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
 	resources :events, except: [:destroy]
 	resources :categories
+	resources :profiles, only: [:new, :edit, :create, :update]
 end
