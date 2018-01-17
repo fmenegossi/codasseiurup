@@ -74,4 +74,28 @@ describe Event, type: :model do
 			expect(Event.order_by_price).to eq([event3, event1, event2])
 		end
 	end
+
+	describe "association with user" do
+		let(:user) { create :user }
+
+		it "belongs to a user" do
+			event = user.events.build(name: "Test Event")
+
+			expect(event.user).to eq(user)
+		end
+	end
+
+	describe "association with category" do
+	  let(:event) { create :event }
+
+	  let(:cat1) { create :category, name: "Hell Yea", events: [event] }
+	  let(:cat2) { create :category, name: "All ages", events: [event] }
+		let(:cat3) { create :category, name: "Cheeso Party", events: [event] }
+
+	  it "has categories" do
+	    expect(event.categories).to include(cat1)
+	    expect(event.categories).to include(cat2)
+	    expect(event.categories).to include(cat3)
+	  end
+	end
 end
