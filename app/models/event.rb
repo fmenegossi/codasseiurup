@@ -8,6 +8,14 @@ class Event < ApplicationRecord
 	validates :ends_at, presence: true
 	validate :start_is_valid, :end_is_valid
 
+	def bargain?
+		price < 30
+	end
+
+	def self.order_by_price
+		order :price
+	end
+
 	private
 
 	def start_is_valid
@@ -18,7 +26,7 @@ class Event < ApplicationRecord
 
 	def end_is_valid
 		if ((ends_at.present?) && (starts_at.present?) && (ends_at < (starts_at + 1.days)))
-			errors.add(:ends_at, "End date must be at least 1 day after start")
+			errors.add(:ends_at, "date must be at least 1 day after start")
 		end
 	end
 end
