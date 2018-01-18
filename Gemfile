@@ -52,6 +52,9 @@ gem "rails_12factor"
 # CarrierWave
 gem 'carrierwave', '0.11.2'
 
+# Cloudinary
+gem 'cloudinary', '1.2.3'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 	gem 'factory_bot_rails'
