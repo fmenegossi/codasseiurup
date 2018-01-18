@@ -46,6 +46,12 @@ gem 'devise'
 # Use font-awesome for icons
 gem "font-awesome-rails"
 
+# Use Rails 12Factor
+gem "rails_12factor"
+
+# CarrierWave
+gem 'carrierwave', '0.11.2'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
 	gem 'factory_bot_rails'
