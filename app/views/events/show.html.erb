@@ -29,6 +29,12 @@
 		<% @event.categories.each do |category| %>
 			<a class="btn btn-success"><%= category.name %></a>
 		<% end %>
+
+		<!-- Photos -->
+		<h4>Photos</h4>
+			<% @room.photos.each do |photo| %>
+				<%= image_tag photo.image %>
+			<% end %>
 	</div>
 
 </div>
