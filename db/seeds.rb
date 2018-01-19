@@ -15,20 +15,25 @@ event1 = Event.create!(name: "Just an poor event.", description: "That's just a 
 event2 = Event.create!(name: "Test event 2", description: "Craziest event you ever know.",
 				   price: 15, capacity: 10, starts_at: Time.now,	ends_at: Time.now + 6.days,	user: user2)
 event3 = Event.create!(name: "Just testing events", description: "It isn't an event!",
-				   price: 15, capacity: 10, starts_at: Time.now,	ends_at: Time.now + 4.days,	user: user1)
+				   price: 15, capacity: 10, starts_at: Time.now,	ends_at: Time.now + 4.days,	user: miriam)
 
 # Categories
 Category.create!([{name:"+18 Only"},{name:"Matine"},{name:"Pizza"},{name:"Happy Hour"},])
 
 # Photos
-photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/kevin-364843_fpfspl.jpg", event: event1)
-photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event1)
-photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/kevin-364843_fpfspl.jpg", event: event1)
+# photo1 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/kevin-364843_fpfspl.jpg", event: event1)
+# photo2 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event1)
+# photo3 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/kevin-364843_fpfspl.jpg", event: event1)
+#
+# photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event2)
+# photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/kevin-364843_fpfspl.jpg", event: event2)
+# photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event2)
+#
+# photo7 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event3)
+# photo8 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event3)
+# photo9 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/kevin-364843_fpfspl.jpg", event: event3)
 
-photo4 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event2)
-photo5 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/kevin-364843_fpfspl.jpg", event: event2)
-photo6 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event2)
-
-photo7 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event3)
-photo8 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/ilya-pavlov-87438_ld37au.jpg", event: event3)
-photo9 = Photo.create!(remote_image_url: "http://res.cloudinary.com/fmenegossi/image/upload/v1516274323/kevin-364843_fpfspl.jpg", event: event3)
+# Registrations
+Registration.create!(user: user1, event: event2, status: "Going", guests_count: 2)
+Registration.create!(user: user1, event: event3, status: "Maybe", guests_count: 3)
+Registration.create!(user: user2, event: event1, status: "Not going", guests_count: 1)

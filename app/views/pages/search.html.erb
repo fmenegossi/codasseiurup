@@ -1,0 +1,11 @@
+<div class="col-md-6 col-md-offset-3">
+	<% @events.each do |event| %>
+		<div class="col-md-6">
+			<div class="event-card">
+				<%= image_tag event.photos.first.image.thumbnail, class: 'img-responsive' %>
+				<p class="text-muted"> <%= event.name %> </p>
+				<%= link_to("See this event", event_path(event.id), class:'btn btn-success') %>
+			</div>
+		</div>
+	<% end %>
+</div>
