@@ -50,7 +50,7 @@ gem "font-awesome-rails"
 gem "rails_12factor"
 
 # CarrierWave
-gem 'carrierwave', '0.11.2'
+gem 'carrierwave', '1.3.2'
 
 # Cloudinary
 gem 'cloudinary', '1.2.3'
